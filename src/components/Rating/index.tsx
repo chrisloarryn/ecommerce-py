@@ -6,7 +6,7 @@ type RatingProps = {
   value: number
 }
 
-const Rating: React.FC<RatingProps> = ({ text, value, color }) => {
+const Rating: React.FC<RatingProps> = ({ color, text, value }) => {
   return (
     <div className='rating'>
       <span>

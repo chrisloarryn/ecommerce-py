@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { LinkContainer } from 'react-router-bootstrap'
 
-import { Navbar, Nav, Container, Row } from 'react-bootstrap'
+import { Navbar, Nav, Container } from 'react-bootstrap' // Row
 
 const Header: React.FC = () => {
   return (
