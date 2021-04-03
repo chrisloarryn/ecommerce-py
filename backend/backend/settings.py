@@ -38,10 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'rest_framework',
+    'corsheaders',
+
     'base.apps.BaseConfig',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -120,3 +125,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/images/'
+
+# For saving images in created folder called "static"
+STATICFILES_DIRS = [
+  BASE_DIR / 'static'
+]
+
+# activate the functionality of media root
+MEDIA_ROOT = 'static/images'
+
+CORS_ALLOW_ALL_ORIGINS = True
