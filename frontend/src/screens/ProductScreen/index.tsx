@@ -18,6 +18,7 @@ const ProductScreen: React.FC<RouteComponentProps<TParams>> = ({ match }) => {
   ) as ProductI
   return (
     <div>
+      {/* btn-outline-secondary */}
       <Link to='/' className='btn btn-light my-3 rounded'>
         Go Back
       </Link>
