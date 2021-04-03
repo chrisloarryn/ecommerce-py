@@ -26,7 +26,7 @@ const ProductScreen: React.FC<RouteComponentProps<TParams>> = ({ match }) => {
   let { error, loading, product } = useSelector(
     (state: GlobalReducersProductType) => state.productDetails
   )
-
+  
   return (
     <div>
       <Link to='/' className='btn btn-light my-3 rounded'>
