@@ -22,7 +22,7 @@ const ProductScreen: React.FC<RouteComponentProps<TParams>> = ({ match }) => {
       setProduct(data as ProductI)
     }
     fetchProducts()
-  }, [])
+  }, [match.params._id])
   return (
     <div>
       {product && (
