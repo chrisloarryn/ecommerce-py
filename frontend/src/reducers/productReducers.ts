@@ -1,9 +1,10 @@
 import { ProductI } from '../types/products'
-import { types } from '../types/productTypes'
 import {
   InitialStateProductDetailsI,
   InitialStateProductListI
 } from '../types/reducersTypes'
+
+import { types } from '../types/productTypes'
 
 const initialStateList: InitialStateProductListI = {
   error: null,

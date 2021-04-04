@@ -2,13 +2,14 @@ import * as React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 
-import Product from './../../components/Product'
 import Loader from './../../components/Loader'
 import Message from './../../components/Message'
+import Product from './../../components/Product'
 
-import { ProductI } from '../../types/products'
 import { listProducts } from '../../actions/productActions'
+
 import { GlobalReducersProductType } from '../../types/reducersTypes'
+import { ProductI } from '../../types/products'
 
 const HomeScreen: React.FC = () => {
   const dispatch = useDispatch()

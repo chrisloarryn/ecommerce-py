@@ -1,4 +1,3 @@
-import Product from '../components/Product'
 import { ProductI } from './products'
 
 export type InitialStateProductListI = Readonly<{
