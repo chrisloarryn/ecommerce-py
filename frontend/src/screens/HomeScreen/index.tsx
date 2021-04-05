@@ -9,7 +9,7 @@ import Product from './../../components/Product'
 import { listProducts } from '../../actions/productActions'
 
 import { GlobalReducersProductType } from '../../types/reducersTypes'
-import { ProductI } from '../../types/products'
+import { ProductI } from '../../types/globalTypes'
 
 const HomeScreen: React.FC = () => {
   const dispatch = useDispatch()

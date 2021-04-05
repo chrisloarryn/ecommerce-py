@@ -1,4 +1,4 @@
-import { ProductI } from './types/products'
+import { ProductI } from "./types/globalTypes"
 
 const products: ProductI[] = [
   {

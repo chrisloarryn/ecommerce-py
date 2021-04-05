@@ -1,8 +1,8 @@
 import axios from 'axios'
-import { ProductI } from '../types/products'
+import { ProductI } from '../types/globalTypes'
+import { ProductDetailI } from '../types/productTypes'
 
-import { types } from '../types/productTypes'
-import { ProductDetailI } from '../types/reducersTypes'
+import { types } from '../types/types'
 
 export const listProducts = () => async (dispatch: (arg0: { type: string; payload?: unknown }) => void) => {
   try {

@@ -1,32 +1,27 @@
-import { ProductI } from './products'
+import { CartItemI } from './cartTypes'
+import { ProductI } from './globalTypes'
+import { ProductDetailI } from './productTypes'
 
 export type InitialStateProductListI = Readonly<{
   error: string | null
   loading: boolean
-  products: ProductI[]
-}>
-
-export type ProductDetailI = Readonly<
-  Partial<ProductI> & {
-    reviews: ReviewI[]
-  }
->
-
-export type ReviewI = Readonly<{
-  product: string
-  user: string
-  name: string
-  rating: number
-  comment: string
+  products?: ProductI[]
 }>
 
 export type InitialStateProductDetailsI = Readonly<{
   error: string | null
   loading: boolean
-  product: ProductDetailI
+  product?: ProductDetailI
+}>
+
+export type InitialStateCartItemsI = Readonly<{
+  error: string | null
+  loading: boolean
+  cartItems?: CartItemI[]
 }>
 
 export type GlobalReducersProductType = Readonly<{
   productList: InitialStateProductListI
   productDetails: InitialStateProductDetailsI
+  cart: InitialStateCartItemsI
 }>

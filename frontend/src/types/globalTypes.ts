@@ -1,3 +1,9 @@
+import { ObjectValuesT } from "./types"
+
+export type TParams = {
+  _id: string
+}
+
 export type ProductI = {
   _id: string
   name: string
@@ -11,6 +17,4 @@ export type ProductI = {
   numReviews: number
 }
 
-export type ProductProps = {
-  product: ProductI
-}
+export type ActionTypes = ObjectValuesT

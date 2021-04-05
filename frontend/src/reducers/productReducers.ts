@@ -1,10 +1,10 @@
-import { ProductI } from '../types/products'
+import { ActionTypes, ProductI } from '../types/globalTypes'
 import {
   InitialStateProductDetailsI,
   InitialStateProductListI
 } from '../types/reducersTypes'
 
-import { types } from '../types/productTypes'
+import { ObjectValuesT, types } from '../types/types'
 
 const initialStateList: InitialStateProductListI = {
   error: null,
@@ -22,7 +22,7 @@ const initialStateDetail: InitialStateProductDetailsI = {
 
 export const productListReducer = (
   state = initialStateList,
-  action: { type: string; payload: unknown }
+  action: { type: ActionTypes; payload: unknown }
 ) => {
   switch (action.type) {
     case types.productListRequest:
@@ -50,7 +50,7 @@ export const productListReducer = (
 
 export const productDetailReducer = (
   state = initialStateDetail,
-  action: { type: string; payload: unknown }
+  action: { type: ObjectValuesT; payload: unknown }
 ) => {
   switch (action.type) {
     case types.productDetailsRequest:

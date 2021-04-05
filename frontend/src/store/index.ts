@@ -6,13 +6,34 @@ import {
   productDetailReducer,
   productListReducer
 } from './../reducers/productReducers'
+import { cartReducer } from './../reducers/cartReducers'
 
 const reducer = combineReducers({
   productDetails: productDetailReducer,
-  productList: productListReducer
+  productList: productListReducer,
+  cart: cartReducer
 })
 
-const initialState = {}
+export const initialErrorAndLoading = {
+  error: null,
+  loading: false,
+}
+
+const initialState = {
+  /* productList: {
+    ...initialErrorAndLoading,
+    products: []
+  },
+  productDetails: {
+    ...initialErrorAndLoading,
+    product: {
+      reviews: []
+    }
+  }, */
+  /* cart: {
+    cartItems: cartItemsFromStorage
+  } */
+}
 
 const middleware = [thunk]
 

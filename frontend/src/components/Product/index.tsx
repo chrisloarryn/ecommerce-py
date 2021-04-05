@@ -5,7 +5,11 @@ import { Card } from 'react-bootstrap'
 
 import Rating from './../Rating'
 
-import { ProductProps } from '../../types/products'
+import { ProductI } from '../../types/globalTypes'
+
+type ProductProps = {
+  product: ProductI
+}
 
 const Product: React.FC<ProductProps> = ({ product }) => (
   <Card className='my-3 p-3 rounded'>
