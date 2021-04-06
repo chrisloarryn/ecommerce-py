@@ -20,7 +20,9 @@ export const cartReducer = (
   switch (action.type) {
     case types.cartAddItem:
       const item = action.payload
-      const existItem = (state.cartItems as CartItemI[]).find((p) => p.product === item.product)
+      const existItem = (state.cartItems as CartItemI[]).find(
+        (p) => p.product === item.product
+      )
       if (existItem) {
         return {
           ...state,
@@ -29,9 +31,19 @@ export const cartReducer = (
           )
         }
       } else {
-        return { ...state, cartItems: [...(state.cartItems as CartItemI[]), item] }
+        return {
+          ...state,
+          cartItems: [...(state.cartItems as CartItemI[]), item]
+        }
       }
 
+    case types.cartRemoveItem:
+      return {
+        ...state,
+        cartItems: (state as InitialStateCartItemsI).cartItems?.filter(
+          (x: CartItemI) => x.product !== action.payload
+        )
+      }
     default:
       return state
   }

@@ -7,7 +7,7 @@ import queryString from 'query-string'
 
 import Message from './../../components/Message'
 
-import { addToCart } from './../../actions/cartActions'
+import { addToCart, removeFromCart } from './../../actions/cartActions'
 
 import { ProductI, TParams } from '../../types/globalTypes'
 import { GlobalReducersProductType } from '../../types/reducersTypes'
@@ -35,9 +35,7 @@ const CartScreen: React.FC<RouteComponentProps<TParams>> = ({
   }, [dispatch, productId, qtyNumber])
 
   const removeFromCartHandler = (_product: string) => {
-    console.log('====================================')
-    console.log(_product)
-    console.log('====================================')
+    dispatch(removeFromCart(_product))
   }
 
   type LocalType = ProductI & CartItemI
