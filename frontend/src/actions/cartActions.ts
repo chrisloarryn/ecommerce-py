@@ -32,11 +32,7 @@ export const addToCart = (_id: string, qty: number) => async (
 
 export const removeFromCart = (_product: string) => (
   dispatch: (arg0: { type: ObjectValuesT; payload: string }) => void,
-  getState: () => {
-    (): any
-    new (): any
-    cart: { (): any; new (): any; cartItems: any }
-  }
+  getState: () => { (): any; new(): any; cart: { (): any; new(): any; cartItems: any } }
 ) => {
   dispatch({
     type: types.cartRemoveItem as ObjectValuesT,
