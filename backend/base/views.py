@@ -13,10 +13,8 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
   def validate(self, attrs):
     data = super().validate(attrs)
-
     data['username'] = self.user.username
     data['email'] = self.user.email
-
     return data
 
 class MyTokenObtainPairView(TokenObtainPairView):
@@ -40,18 +38,18 @@ def getRoutes(request):
   ]
   return Response(routes)
 
+
 @api_view(['GET'])
 def getUserProfile(request):
-  current_user = request.user
-  serialized = UserSerializer(current_user, many=False)
-  return Response(serialized.data)
-
+  user = request.user
+  serializer = UserSerializer(user, many=False)
+  return Response(serializer.data)
 
 @api_view(['GET'])
 def getProducts(request):
   products = Product.objects.all()
-  serialized = ProductSerializer(products, many=True)
-  return Response(serialized.data)
+  serializer = ProductSerializer(products, many=True)
+  return Response(serializer.data)
 
 @api_view(['GET'])
 def getProduct(request, pk):

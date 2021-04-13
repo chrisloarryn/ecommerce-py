@@ -6,7 +6,9 @@ class UserSerializer(serializers.ModelSerializer):
   class Meta:
     model = User
     fields = '__all__'
-    #  ['id', 'username', 'email']
+    
+#  ['id', 'username', 'email']
+#  fields = ['id', '_id', 'username', 'email', 'name', 'isAdmin']
 
 class ProductSerializer(serializers.ModelSerializer):
   class Meta:
